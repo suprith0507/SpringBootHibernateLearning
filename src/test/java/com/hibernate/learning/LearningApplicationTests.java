@@ -40,4 +40,49 @@ class LearningApplicationTests {
 
 	}
 
+	@Test
+	void getAllProductsByNameSanotoor()
+	{
+		List<ProductEntity> productEntityList=productRepository.getAllProductsByNameSanotoor("Santoor");
+		System.out.println(productEntityList);
+
+	}
+	@Test
+	void getAllProductsByNameSanotoorSQL()
+	{
+		List<ProductEntity> productEntityList=productRepository.getAllProductsByNameSanotoorSQL("Santoor");
+		System.out.println(productEntityList);
+
+	}
+
+	@Test
+	void getAllProductsByNameSanotoorSQLProc()
+	{
+		List<ProductEntity> productEntityList=productRepository.ProductsByNameSanotoorSQLProc(Integer.valueOf(1));
+		System.out.println("getAllProductsByNameSanotoorSQLProc");
+		System.out.println(productEntityList);
+
+	}
+
+	@Test
+	void updatePriceUsingSQLProc()
+	{
+		List<ProductEntity> productEntityList=productRepository.updatePriceUsingSQLProc(Double.valueOf(100.32) ,Integer.valueOf(1));
+		System.out.println("getAllProductsByNameSanotoorSQLProc");
+		System.out.println(productEntityList);
+
+	}
+
+	@Test
+	void updateProductpriceInlineUpdate()
+	{
+		productRepository.updateProductpriceInlineUpdate(Double.valueOf(50.32) ,Integer.valueOf(1));
+		System.out.println("updateProductpriceInlineUpdate");
+		//System.out.println(productEntityList);
+
+	}
+
+
+
+
 }
