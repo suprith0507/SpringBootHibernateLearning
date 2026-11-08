@@ -2,6 +2,7 @@ package com.hibernate.learning;
 
 import com.hibernate.learning.entities.ProductEntity;
 import com.hibernate.learning.repositories.ProductRepository;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -56,6 +57,24 @@ class LearningApplicationTests {
 	}
 
 	@Test
+	void getAllProductsByNameSantoorNamedQueryJPQL()
+	{
+		List<ProductEntity> productEntityList=productRepository.getAllProductsByNameSantoorNamedQueryJPQL("Santoor");
+		System.out.println(productEntityList);
+		System.out.println("getAllProductsByNameSantoorNamedQueryJPQL");
+
+	}
+
+	@Test
+	void getAllProductsByNameSantoorNamedQuerySQL()
+	{
+		List<ProductEntity> productEntityList=productRepository.getAllProductsByNameSantoorNamedQuerySQL("Santoor");
+		System.out.println(productEntityList);
+		System.out.println("getAllProductsByNameSantoorNamedQuerySQL");
+
+	}
+
+	@Test
 	void getAllProductsByNameSanotoorSQLProc()
 	{
 		List<ProductEntity> productEntityList=productRepository.ProductsByNameSanotoorSQLProc(Integer.valueOf(1));
@@ -79,6 +98,16 @@ class LearningApplicationTests {
 		productRepository.updateProductpriceInlineUpdate(Double.valueOf(50.32) ,Integer.valueOf(1));
 		System.out.println("updateProductpriceInlineUpdate");
 		//System.out.println(productEntityList);
+
+	}
+
+	@Test
+	@Transactional
+	void ProductsByNameSanotoorSQLProcAnnoation()
+	{
+		List<ProductEntity> productEntityList=productRepository.ProductsByNameSanotoorSQLProcAnnoation(Integer.valueOf(1));
+		System.out.println("updateProductpriceInlineUpdate");
+		System.out.println(productEntityList);
 
 	}
 

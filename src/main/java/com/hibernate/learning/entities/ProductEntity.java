@@ -25,6 +25,10 @@ import java.time.LocalDateTime;
                 @Index(name="Id_unique_constraint",columnList = "Id")
         }
 )
+@NamedQuery(name="getProductListbyIdJPQL",query="select e from ProductEntity e where e.name=?1")
+@NamedNativeQuery(name="getProductListbyIdSQL",
+        query="select * from product_table e where e.product_name=?1",
+        resultClass=ProductEntity.class)//doesn't work without this line .we get object[] and it needs explicit mention during autoscan itself
 public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
