@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
         catalog = "",
         uniqueConstraints = {
                 // @UniqueConstraint(name = "uk_product_name", columnNames = {"name"}),
-                @UniqueConstraint(name="price_title_unique",columnNames={"ProductName,ProductPrice"})
+                @UniqueConstraint(name="price_title_unique",columnNames={"ProductName","ProductPrice"})
         },
         indexes = {
                 @Index(name="Id_unique_constraint",columnList = "Id")
