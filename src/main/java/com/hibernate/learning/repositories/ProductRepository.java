@@ -47,6 +47,9 @@ public interface ProductRepository extends JpaRepository<ProductEntity,Long> {
     @Procedure("getProductInfo")
     public List<ProductEntity> ProductsByNameSanotoorSQLProcAnnoation( Integer Id);
 
+    @Procedure(name="storedProcPreDefinedQueryforGetbyName")
+    public String ProductsByNameSanotoorSQLProcNamedAnnoation( Integer Id);
+
 
 
 }

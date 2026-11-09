@@ -29,6 +29,21 @@ import java.time.LocalDateTime;
 @NamedNativeQuery(name="getProductListbyIdSQL",
         query="select * from product_table e where e.product_name=?1",
         resultClass=ProductEntity.class)//doesn't work without this line .we get object[] and it needs explicit mention during autoscan itself
+
+@NamedStoredProcedureQuery(name="storedProcPreDefinedQueryforGetbyName",
+                           procedureName = "getProductInfoUsingNamedProcQuery",
+                           parameters = { @StoredProcedureParameter(
+                                   mode=ParameterMode.IN,
+                                   name="Id",
+                                   type=Integer.class
+                           ),
+                                   @StoredProcedureParameter(
+                                           mode=ParameterMode.OUT,
+                                           name="o_product_name",
+                                           type=String.class
+                                   )
+}
+)
 public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

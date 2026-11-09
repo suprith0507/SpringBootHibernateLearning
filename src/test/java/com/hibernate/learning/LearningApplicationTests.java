@@ -84,6 +84,16 @@ class LearningApplicationTests {
 	}
 
 	@Test
+	@Transactional
+	void getAllProductsByNameSanotoorNamedSQLProc()
+	{
+		String productName=productRepository.ProductsByNameSanotoorSQLProcNamedAnnoation(Integer.valueOf(1));
+		System.out.println("getAllProductsByNameSanotoorNamedSQLProc");
+		System.out.println(productName);
+
+	}
+
+	@Test
 	void updatePriceUsingSQLProc()
 	{
 		List<ProductEntity> productEntityList=productRepository.updatePriceUsingSQLProc(Double.valueOf(100.32) ,Integer.valueOf(1));
