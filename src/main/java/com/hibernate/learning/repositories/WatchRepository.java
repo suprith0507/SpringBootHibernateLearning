@@ -1,6 +1,8 @@
 package com.hibernate.learning.repositories;
 
 import com.hibernate.learning.entities.WatchEntity;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -13,4 +15,8 @@ public interface WatchRepository extends JpaRepository<WatchEntity,Long> {
     public List<WatchEntity> getAllByBrandOrderByPriceDesc(String brand);
 
     public List<WatchEntity> getAllBy(Sort sort);
+
+    public Page<WatchEntity> getAllBy(Pageable pageable);
+
+    public List<WatchEntity> getAllByCaliberContaining( String caliber,Pageable pageable);
 }
