@@ -1,6 +1,10 @@
 package com.hibernate.learning;
 
+import com.hibernate.learning.entities.ConstructorDToProjectionEntity;
+import com.hibernate.learning.entities.InterfaceProjectionProductEntity;
 import com.hibernate.learning.entities.ProductEntity;
+import com.hibernate.learning.repositories.ConstructorDTOProjectionRepository;
+import com.hibernate.learning.repositories.InterfaceProjectionRepository;
 import com.hibernate.learning.repositories.ProductRepository;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
@@ -15,6 +19,11 @@ class LearningApplicationTests {
 
 	@Autowired
 	ProductRepository productRepository;
+	@Autowired
+	InterfaceProjectionRepository interfaceProjectionRepository;
+
+	@Autowired
+	ConstructorDTOProjectionRepository constructorDTOProjectionRepository;
 	@Test
 	void contextLoads() {
 	}
@@ -121,6 +130,21 @@ class LearningApplicationTests {
 
 	}
 
+	@Test
+	void findByNameInterfaceProjectionExample()
+	{
+		List<InterfaceProjectionProductEntity> interfaceProjectionProductEntities = interfaceProjectionRepository.findByName("Monitor");
+		System.out.println("interfaceProjectionProductEntities");
+		System.out.println(interfaceProjectionProductEntities);
+	}
+
+	@Test
+	void findByNameConstructorDTOProjectionExample()
+	{
+		List<ConstructorDToProjectionEntity> constructorDToProjectionEntities = constructorDTOProjectionRepository.findByName("Monitor");
+		System.out.println("findByNameConstructorDTOProjectionExample");
+		System.out.println(constructorDToProjectionEntities);
+	}
 
 
 

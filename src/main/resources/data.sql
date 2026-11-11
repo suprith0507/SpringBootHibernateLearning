@@ -24,3 +24,14 @@ VALUES
     ('Seiko','Turtle','Prospex','SEK003',650.00,'USD',10.00,45.0,14.0,22.0,180.0,'Steel','Steel','Rubber','Hardlex','Automatic','4R36',41,'Black','Analog',200,NOW(),NOW()),
     ('Seiko','Samurai','Prospex','SEK004',550.00,'USD',9.00,43.8,13.4,22.0,175.0,'Steel','Steel','Steel','Hardlex','Automatic','4R35',41,'Blue','Analog',200,NOW(),NOW()),
     ('Seiko','Presage Cocktail','Presage','SEK005',495.00,'USD',6.00,40.5,11.8,20.0,145.0,'Steel','Steel','Leather','Hardlex','Automatic','4R35',41,'Blue','Analog',50,NOW(),NOW());
+
+
+
+INSERT INTO product_table
+(id, product_price, created_date, updated_date, product_name)
+VALUES
+    (1, 999.99,  '2026-11-01 10:00:00', '2026-11-01 10:00:00', 'Laptop'),
+    (2, 499.50,  '2026-11-02 11:15:00', '2026-11-02 11:15:00', 'Monitor'),
+    (3, 79.99,   '2026-11-03 09:30:00', '2026-11-03 09:30:00', 'Keyboard'),
+    (4, 39.99,   '2026-11-04 14:20:00', '2026-11-04 14:20:00', 'Mouse'),
+    (5, 129.99,  '2026-11-05 16:45:00', '2026-11-05 16:45:00', 'Headphones');
