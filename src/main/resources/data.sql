@@ -35,3 +35,114 @@ VALUES
     (3, 79.99,   '2026-11-03 09:30:00', '2026-11-03 09:30:00', 'Keyboard'),
     (4, 39.99,   '2026-11-04 14:20:00', '2026-11-04 14:20:00', 'Mouse'),
     (5, 129.99,  '2026-11-05 16:45:00', '2026-11-05 16:45:00', 'Headphones');
+
+-- =========================================
+-- AADHAR_CARD_ENTITY
+-- =========================================
+
+INSERT INTO aadhar_card_entity(aadhar_id,aadhar_number,address,city,state) VALUES (1,'123456789001','MG Road','Bangalore','Karnataka');
+INSERT INTO aadhar_card_entity(aadhar_id,aadhar_number,address,city,state) VALUES (2,'123456789002','BTM Layout','Bangalore','Karnataka');
+INSERT INTO aadhar_card_entity(aadhar_id,aadhar_number,address,city,state) VALUES (3,'123456789003','Jubilee Hills','Hyderabad','Telangana');
+INSERT INTO aadhar_card_entity(aadhar_id,aadhar_number,address,city,state) VALUES (4,'123456789004','Anna Nagar','Chennai','Tamil Nadu');
+INSERT INTO aadhar_card_entity(aadhar_id,aadhar_number,address,city,state) VALUES (5,'123456789005','Sector 21','Delhi','Delhi');
+INSERT INTO aadhar_card_entity(aadhar_id,aadhar_number,address,city,state) VALUES (6,'123456789006','Baner','Pune','Maharashtra');
+INSERT INTO aadhar_card_entity(aadhar_id,aadhar_number,address,city,state) VALUES (7,'123456789007','Kukatpally','Hyderabad','Telangana');
+INSERT INTO aadhar_card_entity(aadhar_id,aadhar_number,address,city,state) VALUES (8,'123456789008','Indiranagar','Bangalore','Karnataka');
+INSERT INTO aadhar_card_entity(aadhar_id,aadhar_number,address,city,state) VALUES (9,'123456789009','Whitefield','Bangalore','Karnataka');
+INSERT INTO aadhar_card_entity(aadhar_id,aadhar_number,address,city,state) VALUES (10,'123456789010','Madhapur','Hyderabad','Telangana');
+
+-- =========================================
+-- PATIENT_ENTITY
+-- =========================================
+
+INSERT INTO patient_entity(patient_id,patient_name,age,gender,mobile_number,aadhar_id) VALUES (1,'Rohan Sharma',32,'Male','9876543210',1);
+INSERT INTO patient_entity(patient_id,patient_name,age,gender,mobile_number,aadhar_id) VALUES (2,'Priya Reddy',28,'Female','9876543211',2);
+INSERT INTO patient_entity(patient_id,patient_name,age,gender,mobile_number,aadhar_id) VALUES (3,'Arjun Kumar',45,'Male','9876543212',3);
+INSERT INTO patient_entity(patient_id,patient_name,age,gender,mobile_number,aadhar_id) VALUES (4,'Sneha Patel',35,'Female','9876543213',4);
+INSERT INTO patient_entity(patient_id,patient_name,age,gender,mobile_number,aadhar_id) VALUES (5,'Rahul Verma',40,'Male','9876543214',5);
+INSERT INTO patient_entity(patient_id,patient_name,age,gender,mobile_number,aadhar_id) VALUES (6,'Meera Singh',30,'Female','9876543215',6);
+INSERT INTO patient_entity(patient_id,patient_name,age,gender,mobile_number,aadhar_id) VALUES (7,'Kiran Rao',55,'Male','9876543216',7);
+INSERT INTO patient_entity(patient_id,patient_name,age,gender,mobile_number,aadhar_id) VALUES (8,'Anjali Gupta',26,'Female','9876543217',8);
+INSERT INTO patient_entity(patient_id,patient_name,age,gender,mobile_number,aadhar_id) VALUES (9,'Vikram Joshi',48,'Male','9876543218',9);
+INSERT INTO patient_entity(patient_id,patient_name,age,gender,mobile_number,aadhar_id) VALUES (10,'Pooja Nair',38,'Female','9876543219',10);
+
+-- =========================================
+-- DEPARTMENT_ENTITY
+-- =========================================
+
+INSERT INTO department_entity(department_id,department_name,location,block_name,department_code) VALUES (1,'Cardiology','Block-A','A1','CARD');
+INSERT INTO department_entity(department_id,department_name,location,block_name,department_code) VALUES (2,'Neurology','Block-B','B1','NEUR');
+INSERT INTO department_entity(department_id,department_name,location,block_name,department_code) VALUES (3,'Orthopedics','Block-C','C1','ORTH');
+INSERT INTO department_entity(department_id,department_name,location,block_name,department_code) VALUES (4,'Dermatology','Block-D','D1','DERM');
+INSERT INTO department_entity(department_id,department_name,location,block_name,department_code) VALUES (5,'ENT','Block-E','E1','ENT');
+INSERT INTO department_entity(department_id,department_name,location,block_name,department_code) VALUES (6,'Pediatrics','Block-F','F1','PED');
+INSERT INTO department_entity(department_id,department_name,location,block_name,department_code) VALUES (7,'Oncology','Block-G','G1','ONCO');
+INSERT INTO department_entity(department_id,department_name,location,block_name,department_code) VALUES (8,'Radiology','Block-H','H1','RAD');
+INSERT INTO department_entity(department_id,department_name,location,block_name,department_code) VALUES (9,'Emergency','Block-I','I1','EMER');
+INSERT INTO department_entity(department_id,department_name,location,block_name,department_code) VALUES (10,'General Medicine','Block-J','J1','GMED');
+
+-- =========================================
+-- DOCTOR_ENTITY
+-- =========================================
+
+INSERT INTO doctor_entity(doctor_id,doctor_name,specialization,experience,mobile_number) VALUES (1,'Dr. Amit Sharma',12,'9000000001','Cardiology');
+INSERT INTO doctor_entity(doctor_id,doctor_name,specialization,experience,mobile_number) VALUES (2,'Dr. Neha Rao',10,'9000000002','Neurology');
+INSERT INTO doctor_entity(doctor_id,doctor_name,specialization,experience,mobile_number) VALUES (3,'Dr. Karthik Reddy',15,'9000000003','Orthopedics');
+INSERT INTO doctor_entity(doctor_id,doctor_name,specialization,experience,mobile_number) VALUES (4,'Dr. Priya Singh',8,'9000000004','Dermatology');
+INSERT INTO doctor_entity(doctor_id,doctor_name,specialization,experience,mobile_number) VALUES (5,'Dr. Vikram Patel',11,'9000000005','ENT');
+INSERT INTO doctor_entity(doctor_id,doctor_name,specialization,experience,mobile_number) VALUES (6,'Dr. Ananya Gupta',9,'9000000006','Pediatrics');
+INSERT INTO doctor_entity(doctor_id,doctor_name,specialization,experience,mobile_number) VALUES (7,'Dr. Arjun Mehta',13,'9000000007','Oncology');
+INSERT INTO doctor_entity(doctor_id,doctor_name,specialization,experience,mobile_number) VALUES (8,'Dr. Rakesh Kumar',14,'9000000008','Radiology');
+INSERT INTO doctor_entity(doctor_id,doctor_name,specialization,experience,mobile_number) VALUES (9,'Dr. Swetha Nair',7,'9000000009','Emergency');
+INSERT INTO doctor_entity(doctor_id,doctor_name,specialization,experience,mobile_number) VALUES (10,'Dr. Rahul Verma',16,'9000000010','General Medicine');
+
+-- =========================================
+-- DOCTOR_DEPARTMENT
+-- =========================================
+
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (1,1);
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (1,9);
+
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (2,2);
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (2,10);
+
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (3,3);
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (3,9);
+
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (4,4);
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (4,10);
+
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (5,5);
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (5,9);
+
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (6,6);
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (6,10);
+
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (7,7);
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (7,9);
+
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (8,8);
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (8,10);
+
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (9,9);
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (9,1);
+
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (10,10);
+INSERT INTO doctor_department(doctor_id,department_id) VALUES (10,2);
+
+-- =========================================
+-- APPOINTMENT_ENTITY
+-- =========================================
+
+INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (1,'2026-12-01','10:00','CONFIRMED',500,1);
+INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (2,'2026-12-01','11:00','CONFIRMED',550,1);
+INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (3,'2026-12-02','09:30','CONFIRMED',600,2);
+INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (4,'2026-12-03','12:00','PENDING',700,3);
+INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (5,'2026-12-05','03:00','CONFIRMED',700,3);
+INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (6,'2026-12-04','10:00','CONFIRMED',450,4);
+INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (7,'2026-12-04','04:00','PENDING',550,5);
+INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (8,'2026-12-06','02:00','CONFIRMED',500,6);
+INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (9,'2026-12-07','11:00','CONFIRMED',650,7);
+INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (10,'2026-12-08','05:00','CONFIRMED',800,8);
+INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (11,'2026-12-09','10:30','PENDING',550,9);
+INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (12,'2026-12-10','09:00','CONFIRMED',600,10);

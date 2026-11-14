@@ -21,7 +21,7 @@ public class PatientEntity {
     // In DB patient table it will look for a key called aadhar_id and use it as Fkey for join operations.
     //this joincolumn doesnt mention about relationship. relatioship is defined by onetoone annoation
     //Join column defines the Fkey to be used from the DB for creating join queries.
-    private AadharCardEntity aadharCardEntity;
+    private AadharCardEntity aadharCardEntityfromPatient;
     //patient has aadhar. patient table will have AADharID s Fkey. so this one is the owning side
     //owing side should have the Joincolumn annotation .Inverse side should have the mapped by annoation.
 

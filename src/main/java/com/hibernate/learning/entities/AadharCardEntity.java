@@ -14,7 +14,7 @@ public class AadharCardEntity {
     private String city;
     private String state;
 
-    @OneToOne(mappedBy = "aadharCardEntity" ,fetch = FetchType.EAGER,orphanRemoval = true,cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "aadharCardEntityfromPatient" ,fetch = FetchType.EAGER,orphanRemoval = true,cascade = CascadeType.ALL)
     //this tell spring that aadhar is not the oowner entity
     //look for a variable called aadharCardEntity in Patient entity. that fellow will hold the Fkey.
     //fetchtype will be eager for onetoone and manytoone by default as they point to one parent and it can be fetched faster
