@@ -2,6 +2,9 @@ package com.hibernate.learning.entities;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table
 public class PatientEntity {
@@ -21,4 +24,12 @@ public class PatientEntity {
     private AadharCardEntity aadharCardEntity;
     //patient has aadhar. patient table will have AADharID s Fkey. so this one is the owning side
     //owing side should have the Joincolumn annotation .Inverse side should have the mapped by annoation.
+
+    @OneToMany(mappedBy = "patientEntityFromAppointment",cascade = CascadeType.ALL,orphanRemoval = true)
+    private List<AppointmentEntity> appointmentEntities=new ArrayList<>();
+    //usually patient_id will be there in appointments table.
+    //we cant have appoitmentIDs in one column in patients table.
+    //so appointments table holding Fkey==>owner ,Patient==>inverse side
+    //put cascadetype here because if we want to save patient , we need to first save appointment.
+    //put orphanremoval here because this is the parent and we want appointment to be removed if patient is removed.
 }
