@@ -24,7 +24,9 @@ public class PatientEntity {
     private String gender;
     private String mobileNumber;
 
-    @OneToOne()
+    @OneToOne(cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
+            orphanRemoval = true)
     @JoinColumn(name="aadhar_id")
     // In DB patient table it will look for a key called aadhar_id and use it as Fkey for join operations.
     //this joincolumn doesnt mention about relationship. relatioship is defined by onetoone annoation

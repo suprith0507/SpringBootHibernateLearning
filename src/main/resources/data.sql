@@ -146,3 +146,19 @@ INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,
 INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (10,'2026-12-08','05:00','CONFIRMED',800,8);
 INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (11,'2026-12-09','10:30','PENDING',550,9);
 INSERT INTO appointment_entity(appointment_id,appointment_date,appointment_time,status,consultation_fee,patient_id) VALUES (12,'2026-12-10','09:00','CONFIRMED',600,10);
+
+
+UPDATE aadhar_card_entity_seq
+SET next_val = 11;
+
+UPDATE patient_entity_seq
+SET next_val = 11;
+
+UPDATE department_entity_seq
+SET next_val = 11;
+
+UPDATE doctor_entity_seq
+SET next_val = 11;
+
+UPDATE appointment_entity_seq
+SET next_val = 13;

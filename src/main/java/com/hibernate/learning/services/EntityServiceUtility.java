@@ -29,10 +29,7 @@ public class EntityServiceUtility {
                         SharedSessionContractImplementor.class);
 
         EntityEntry entry =
-                entityManager
-                        .unwrap(SharedSessionContractImplementor.class)
-                        .getPersistenceContextInternal()
-                        .getEntry(entity);
+                session.getPersistenceContextInternal().getEntry(entity);
 
 
         if (entry != null) {
